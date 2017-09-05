@@ -1,0 +1,28 @@
+#!/bin/bash
+
+###
+# start-nowonlib <node-exec> [port]
+###
+
+nodeExec=$1
+PORT=$2
+nowonProj="/nowonlib.node"
+
+# $PORT 가 정해지지 않았다면
+if [ -z $PORT ]; then
+  PORT=3000
+fi
+
+# nowonlib 프로젝트 디렉토리가 있다면..
+if [ -d "$nowonProj" ]; then
+  echo "nowonlib's dir exists."
+else # 없다면
+  cd /
+  # github 에서 가져오기
+  git clone "https://github.com/bynaki/nowonlib.node"
+fi
+
+cd $nowonProj
+git pull
+npm install
+PORT=$PORT $nodeExec server.js

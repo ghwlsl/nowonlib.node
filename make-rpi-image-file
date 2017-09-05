@@ -1,0 +1,13 @@
+#!/bin/bash
+
+##
+# Raspberry PI 를 위한 Dockerfile auto build 에 필요한 이미지 생성
+##
+
+cd docker
+docker build -t tmp-rpi-image -f rpi-dockerfile .
+docker create --name tmp-rpi-container tmp-rpi-image
+cd ../rpi-docker
+docker export tmp-rpi-container | xz -f > rpi-nowonlib.tar.xz
+docker rm tmp-rpi-container
+docker rmi tmp-rpi-image

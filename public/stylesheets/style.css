@@ -1,0 +1,180 @@
+body {
+  padding: 5em 0;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table,
+td,
+tr {
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+  margin-bottom: 1em;
+}
+
+#show_seat {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+ul.show_cell {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 64em;
+  text-align: center;
+}
+
+li.show_button {
+  box-sizing: border-box;
+  float: left;
+  margin: 0 0.2em 0.2em 0.2em;
+  width: 4.9em;
+  height: 4.9em;
+  border-radius: 2.45em;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 4.9em;
+  color: #999999;
+  background: #dddddd;
+  cursor: pointer;
+}
+
+li#show_ok {
+  color: #ffffff;
+  background: #EB1515;
+}
+
+li.show_selected {
+  color: #ffffff;
+  background: #A8C500;
+}
+
+span.show_order {
+  font-size: 0.6em;
+}
+
+table.seat_table {
+  color: #333333;
+  margin: 0 auto;
+}
+
+td.seat_title {
+  /*padding: 0 0.3em;*/
+  /*border-radius: 0.5em;*/
+  background: #EEEEEE;
+  width: 4em;
+  text-align: center;
+}
+
+ul.bar_list {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+li.bar {
+  box-sizing: border-box;
+  background: #eeeeee;
+  width: 1.6em;
+  height: 1.6em;
+  margin: 1px;
+  float: left;
+  /*border-radius: 0.2em;*/
+  border: 1px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+li.clear {
+  clear: left;
+}
+
+li.bar_unknown {
+  background: #e9c0ff;
+  opacity: 0.5;
+}
+
+li.bar_orange {
+  background: #FBB30E;
+  opacity: 0.6;
+}
+
+li.bar_black {
+  background: #333333;
+  opacity: 0.6;
+}
+
+li.bar_gray {
+  background: #a0a0a0;
+  opacity: 0.6;
+}
+
+li.bar_green {
+  background: #7cd903;
+  opacity: 0.6;
+}
+
+li.bar_red {
+  background: #EB1515;
+  opacity: 0.6;
+}
+
+li.bar_blue {
+  background: #5E93F1;
+  opacity: 0.6;
+}
+
+li.bar_selected {
+  border: 1px solid #666666;
+  opacity: 1;
+}
+
+#tomorrow_btn {
+  cursor: pointer;
+}
+
+.tomorrow_on {
+  color: #ffffff;
+  background: #5E93F1 !important;
+}
+
+div#msg_bar {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 4em;
+  background: #dddddd;
+  opacity: 0.8;
+  line-height: 4em;
+  padding: 0 2em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.error_msg {
+  color: #ff0000;
+}
+
+.hide {
+  display: none;
+}
+
+#signin {
+  position: fixed;
+  z-index: 200;
+  top: 0px;
+  right: 0px;
+  margin: 0.3em;
+}
+
+#signin-modal .modal-body {
+  padding: 0 2em;
+}
