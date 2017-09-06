@@ -16,6 +16,7 @@ RUN ["bin/sh", "-c", "ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"]
 RUN npm install -g nodemon node-gyp
 ADD start-nowonlib /bin/
 WORKDIR /bin
-RUN chmod 755 start-nowonlib
+RUN chmod 755 /bin/start-nowonlib \
+    && ln -s /bin/start-nowonlib /
 ENTRYPOINT ["start-nowonlib"]
 CMD ["node", "3000"]
