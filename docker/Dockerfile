@@ -3,10 +3,8 @@
 # 베이스 이미지
 FROM node:latest
 
-# 내 정보
-MAINTAINER bynaki <bynaki@icloud.com>
-
 # 정보
+LABEL maintainer="bynaki <bynaki@icloud.com>"
 LABEL title="nowonlib.node"
 LABEL version="latest"
 LABEL description="https://github.com/bynaki/nowonlib.node"
